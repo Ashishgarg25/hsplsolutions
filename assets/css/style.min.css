@@ -44,3 +44,81 @@
 ;color:#fff}.footer-bottom{padding:30px 20px;background-color:#0f0a0a;color:#ddd}.footer-bottom-2{padding:30px 20px}.footer-bottom-3{padding:30px 0;background-color:#fff}@media (max-width:991px){.footer-bottom-3{text-align:center;padding:30px 0}}.footer-bottom-3 .copyright-text{padding:0 30px}.footer-bottom-3 .form-control{font-size:14px;border:0;padding-right:0;color:#000!important}.footer-bottom-3 .input-group.input-group-primary{border:1px solid #0A82ED
 ;-webkit-border-radius:30px;-moz-border-radius:30px;border-radius:30px}.footer-bottom-3 .input-group.input-group-primary .btn-sm{padding:17px 50px}@media (max-width:1369px){.footer-bottom-3 .input-group.input-group-primary .btn-sm{padding:13px 30px}}a.scroll-to-top{position:fixed;bottom:0;right:30px;height:40px;width:40px;background:rgba(10,130,237,.7);line-height:40px;text-align:center;color:#fff;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;-webkit-transition:.3s;-o-transition:.3s;-moz-transition:.3s;transition:.3s;z-index:995;font-size:14px;opacity:0;visibility:hidden}@media (max-width:767px){a.scroll-to-top{right:10px;height:30px;width:30px;line-height:30px;font-size:12px}}a.scroll-to-top.show{bottom:40px;opacity:1;visibility:visible}a.scroll-to-top.show:hover{-webkit-transform:translateY(-4px);-moz-transform:translateY(-4px);-ms-transform:translateY(-4px);-o-transform:translateY(-4px);transform:translateY(-4px)}@media (max-width:767px){a.scroll-to-top.show{bottom:10px}}
 /*# sourceMappingURL=style.min.css.map */
+.certi-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.certi-scroll {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.certi-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-inner {
+    display: inline-flex;
+    gap: 25px;
+}
+
+.item img {
+    height: 120px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.item img:hover {
+    transform: scale(1.1);
+}
+
+/* Left/Right buttons */
+.scroll-btn {
+    background: #ffffff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.left-btn {
+    margin-right: 10px;
+}
+
+.right-btn {
+    margin-left: 10px;
+}
+
+/* Auto scroll animation stops on hover */
+.certi-scroll:hover {
+    animation-play-state: paused !important;
+}
+#certiScroll img {
+    -webkit-user-drag: none;
+    user-drag: none;
+    -webkit-touch-callout: none;
+    draggable: false;
+    pointer-events: auto; /* ensure pointer events still hit the container */
+  }
+
+  #certiScroll { cursor: grab; touch-action: pan-y; } /* allow vertical touch scroll if user intends */
+  #certiScroll.grabbing { cursor: grabbing; }
+
+#certiScroll.grabbing {
+    cursor: grabbing;
+}
